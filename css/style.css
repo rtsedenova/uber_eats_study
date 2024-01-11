@@ -102,43 +102,51 @@ form {
 /* Cards */
 
 .cards-container {
+  display: flex;
+  flex-wrap: wrap;
   padding-bottom: 60px;
+  padding: 0px 12px;
 }
 
 .card {
-  width: 100%;
-  max-width: 400px;
-  margin: 20px auto;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 8px);
+  margin: 4px;
 }
 
 .card img {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid #ccc;
 }
 
 .card .info {
-  padding: 15px;
+  padding: 15px 0px;
 }
 
 .card .name {
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: clamp(18px, 24px, 30px);
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
-.card .desc1 {
-  font-size: 0.9em;
+.card .desc1,
+.card .desc2 {
+  font-size: clamp(16px, 17px, 22px);
   margin-bottom: 5px;
 }
 
-.card .desc2 {
-  font-size: 0.9em;
-  margin-bottom: 5px;
+.card .desc1 {
+  color: rgb(115, 115, 115);
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
 /* Footer Section */
@@ -253,4 +261,13 @@ form {
 #end {
   border: 0;
   padding-bottom: 20px;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 8px);
+    margin: 4px;
+  }
 }
