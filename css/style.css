@@ -72,19 +72,10 @@ form {
 }
 
 #inp1 {
-  width: 94%;
+  width: 100%;
   padding: 10px 20px;
   border: 0;
   border-bottom: 1.55px solid var(--border-color);
-}
-
-#inp2 {
-  width: 5%;
-  background-color: white;
-  border: 1.6px solid var(--border-color);
-  font-size: 16px;
-  border-radius: 4px;
-  font-weight: 400;
 }
 
 /* City title */
@@ -123,14 +114,14 @@ form {
 }
 
 .card .name {
-  font-size: clamp(18px, 24px, 30px);
+  font-size: clamp(18px, 2vw, 30px);
   font-weight: 500;
   margin-bottom: 10px;
 }
 
 .card .desc1,
 .card .desc2 {
-  font-size: clamp(16px, 17px, 22px);
+  font-size: clamp(16px, 1vw, 22px);
   margin-bottom: 5px;
 }
 
@@ -140,13 +131,17 @@ form {
 
 .pagination {
   text-align: center;
-  margin-top: 20px;
+  padding: 40px 0px;
 }
 
 .pagination button {
   margin: 0 5px;
   padding: 8px 16px;
   cursor: pointer;
+  background-color: #49a144;
+  border: 0;
+  color: white;
+  border-radius: 7px;
 }
 
 /* Footer Section */
@@ -269,5 +264,12 @@ form {
   .card {
     width: calc(50% - 8px);
     margin: 4px;
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: calc(100% - 4px);
+    margin: 2px;
   }
 }
