@@ -92,11 +92,15 @@ form {
 
 /* Cards */
 
-.cards-container {
+#cards-container {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 60px;
   padding: 0px 12px;
+}
+
+#cards-container.hidden {
+  display: none;
 }
 
 .card {
@@ -106,7 +110,8 @@ form {
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 70%;
+  object-fit: cover;
 }
 
 .card .info {
@@ -142,6 +147,125 @@ form {
   border: 0;
   color: white;
   border-radius: 7px;
+}
+
+#loader-container {
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+}
+
+#loader-container.hidden {
+  display: none;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #49a144;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* page.html section */
+
+.page-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.back-btn {
+  padding: 14px 24px;
+}
+
+button.back {
+  font-size: 28px;
+  padding: 0px 16px;
+  background-color: #49a144;
+  border: 0;
+  color: white;
+  border-radius: 7px;
+}
+
+.restaurant-info {
+  display: flex;
+  padding: 0;
+}
+
+.bg-image {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  position: relative;
+}
+
+.info_2 {
+  position: absolute;
+  top: 31%;
+  left: 24px;
+  background-color: white;
+  filter: drop-shadow(2px 4px 18px rgb(65, 65, 65));
+  padding: 20px 24px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.name_2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  align-self: center;
+}
+
+.row-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: self-end;
+}
+
+.desc1_2 {
+  display: flex;
+  max-width: 60%;
+  flex-wrap: wrap;
+  color: #626262;
+  font-weight: 400;
+}
+
+.desc2_2 {
+  background-color: #262626;
+  color: white;
+  font-weight: 400;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.menu-nav {
+  padding: 24px 24px;
+  border-bottom: 1.5px solid var(--border-color);
+}
+
+.menu-nav a {
+  text-decoration: none;
+  color: #626262;
+  margin-right: 30px;
+  font-size: 18px;
+}
+
+.menu-content {
+  padding: 20px 24px;
 }
 
 /* Footer Section */

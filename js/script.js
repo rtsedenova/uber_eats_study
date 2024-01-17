@@ -2,7 +2,7 @@ const global = {
   currentPage: window.location.pathname,
 };
 
-const cardsContainer = document.querySelector(".cards-container");
+const cardsContainer = document.querySelector("#cards-container");
 
 async function showCards() {
   const results = await fetchData();
@@ -36,8 +36,42 @@ async function showCards() {
     card.appendChild(info);
 
     cardsContainer.appendChild(card);
+    card.addEventListener("click", () => {
+      transition({
+        img: item.img,
+        name: item.name,
+        desc1: item.desc1,
+        desc2: item.desc2,
+      });
+    });
   });
 }
+
+function transition(cardInfo) {
+  const queryString = new URLSearchParams(cardInfo).toString();
+  window.location.href = `page.html?${queryString}`;
+}
+
+const spinner = document.querySelector("#loader-container");
+
+function showSpinner() {
+  spinner.classList.remove("hidden");
+  cardsContainer.classList.add("hidden");
+}
+
+function hideSpinner() {
+  spinner.classList.add("hidden");
+  cardsContainer.classList.remove("hidden");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  showSpinner();
+  init();
+});
+
+window.addEventListener("load", function () {
+  hideSpinner();
+});
 
 // Fetch Data
 async function fetchData() {
@@ -62,4 +96,20 @@ function init() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const restInfo = document.querySelector(".restaurant-info");
+
+  restInfo.innerHTML = `
+  <img class="bg-image" src="${urlParams.get("img")}"/>
+          
+    <div class="info_2">
+        <div class="name_2">${urlParams.get("name")}</div>
+        <div class="row-info">
+          <div class="desc1_2">${urlParams.get("desc1")}</div>
+        <div class="desc2_2">${urlParams.get("desc2")}</div>
+        </div>
+    </div>
+  `;
+});
