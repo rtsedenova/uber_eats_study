@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <!-- My JS -->
+    <!-- <script src="js/bundle.js" defer></script> -->
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <a href="#" class="logo"><img src="images/logo.svg" /></a>
+        <div class="enter">
+          <button class="enterBtn">Войти</button>
+          <button class="shopBasketBtn">
+            <img src="images/basket.svg" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Content -->
+
+    <!-- Search -->
+    <form action="/search" method="get">
+      <input type="search" name="q" placeholder="Search..." id="inp1" />
+    </form>
+    <!-- City Title -->
+    <div class="city-title">
+      <p>Рестораны в Москве</p>
+    </div>
+    <!-- Cards -->
+    <div id="cards-container" class="hidden">
+      <!-- <div class="card">
+        <img src="images/img1.png" />
+        <div class="info">
+          <div class="id-hidden"></div>
+          <div class="name"></div>
+          <div class="desc1"></div>
+          <div class="desc2"></div>
+        </div>
+      </div> -->
+    </div>
+    <div id="loader-container" class="hidden">
+      <div class="loader"></div>
+    </div>
+    <div class="pagination">
+      <button id="prev">Prev</button>
+      <button id="next">Next</button>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="ft-container">
+        <div class="ft-logo-container">
+          <img src="images/white-logo.svg" />
+        </div>
+        <div class="ft-content-container">
+          <div class="content-column">
+            <button class="languageBtn">
+              <div>
+                <img src="images/world.svg" />
+                <p>Русский</p>
+              </div>
+              <img src="images/arrow.svg" />
+            </button>
+            <p class="tag"><span class="greenTag">#</span>UberEats</p>
+            <div class="socialMedias">
+              <img src="images/instagram.svg" />
+              <img src="images/facebook.svg" />
+              <img src="images/x.svg" />
+            </div>
+          </div>
+          <div class="content-column" id="content-column">
+            <p>Об UberEats</p>
+            <p>Станьте партнёром по доставке</p>
+            <p>Станьте парнёром-рестораном</p>
+          </div>
+          <div class="content-column" id="content-column">
+            <p>Все города</p>
+            <p>Цены</p>
+            <p>Помощь</p>
+            <p>FAQs</p>
+          </div>
+        </div>
+        <div class="download-application">
+          <img class="left" src="images/app-store.svg" />
+          <img src="images/google-play.svg" />
+        </div>
+        <div class="ft-content-container" id="end">
+          <div class="content-column" id="content-column">
+            <p>© 2017 Uber Technologies Inc.</p>
+          </div>
+          <div class="content-column" id="content-column">
+            <p>Обработка персональных данных</p>
+          </div>
+          <div class="content-column" id="content-column">
+            <p>Пользовательское соглашение</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
