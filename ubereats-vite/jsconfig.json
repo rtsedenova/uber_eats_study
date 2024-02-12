@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "~css/*": [
+                "src/css/*"
+            ],
+            "~js/*": [
+                "src/js/*"
+            ],
+            "~/*": [
+                "src/*"
+            ],
+            "~json/*": [
+                "src/json/*"
+            ],
+            "~home/*": [
+                "src/js/home/*"
+            ],
+            "~restDetails/*": [
+                "src/js/restDetails/*"
+            ]
+        }
+    }
+}

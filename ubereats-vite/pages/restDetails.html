@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Ubereats</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <a href="#" class="logo"
+          ><img src="/public/images/restImages/logo.svg"
+        /></a>
+        <div class="enter">
+          <button class="enterBtn">Войти</button>
+          <button class="shopBasketBtn">
+            <img src="/public/images/restImages/basket.svg" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Content -->
+    <div class="page-content-container">
+      <div class="back-btn">
+        <button class="back">↩</button>
+      </div>
+      <div class="restaurant-info">
+        <!-- <img class="bg-image" src="${urlParams.get("img")}"/>
+          
+    <div class="info_2">
+        <div class="name_2">${urlParams.get("name")}</div>
+        <div class="row-info">
+          <div class="desc1_2">${urlParams.get("desc1")}</div>
+        <div class="desc2_2">${urlParams.get("desc2")}</div>
+        </div>
+    </div> -->
+      </div>
+      <div id="menuNav">
+        <a href="">Закуски</a>
+        <a href="">Салаты</a>
+        <a href="">Супы</a>
+        <a href="">Горячие блюда</a>
+        <a href="">Гарниры</a>
+        <a href="">Десерты</a>
+      </div>
+      <div id="menuContent"></div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="ft-container">
+        <div class="ft-logo-container">
+          <img src="/public/images/restImages/white-logo.svg" />
+        </div>
+        <div class="ft-content-container">
+          <div class="content-column">
+            <button class="languageBtn">
+              <div>
+                <img src="/public/images/restImages/world.svg" />
+                <p>Русский</p>
+              </div>
+              <img src="/public/images/restImages/arrow.svg" />
+            </button>
+            <p class="tag"><span class="greenTag">#</span>UberEats</p>
+            <div class="socialMedias">
+              <img src="/public/images/restImages/instagram.svg" />
+              <img src="/public/images/restImages/facebook.svg" />
+              <img src="/public/images/restImages/x.svg" />
+            </div>
+          </div>
+          <div class="content-column" id="content-column">
+            <p>Об UberEats</p>
+            <p>Станьте партнёром по доставке</p>
+            <p>Станьте парнёром-рестораном</p>
+          </div>
+          <div class="content-column" id="content-column">
+            <p>Все города</p>
+            <p>Цены</p>
+            <p>Помощь</p>
+            <p>FAQs</p>
+          </div>
+        </div>
+        <div class="download-application">
+          <img class="left" src="/public/images/restImages/app-store.svg" />
+          <img src="/public/images/restImages/google-play.svg" />
+        </div>
+        <div class="ft-content-container" id="end">
+          <div class="content-column" id="content-column">
+            <p>© 2017 Uber Technologies Inc.</p>
+          </div>
+          <div class="content-column" id="content-column">
+            <p>Обработка персональных данных</p>
+          </div>
+          <div class="content-column" id="content-column">
+            <p>Пользовательское соглашение</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- My JS -->
+    <script type="module" src="../src/js/restDetails.js"></script>
+  </body>
+</html>

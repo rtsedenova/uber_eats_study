@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-9p4a8sJU.js";function c(){import.meta.url,import("_").catch(()=>1),async function*(){}().next()}const t=document.querySelector(".back");t.addEventListener("click",function(){window.location.href="/"});export{c as __vite_legacy_guard};
