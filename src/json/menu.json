@@ -1,0 +1,417 @@
+[
+    {
+     "id" : 1,
+     "blocks" : {
+         "appetizers" : [
+             {
+                 "b_name" : "Закуски",
+                 "items_list" : [
+                     {
+                         "item_name" : "Картофель по-деревенски", "price" : "90", "item_img" : "images/menuImages/id1_b1_item1.jpg"
+                     },
+                     {
+                         "item_name" : "Картофель фри", "price" : "120", "item_img" : "images/menuImages/id1_b1_item2.jpg"
+                     }
+                 ]
+             }
+         ],
+         "burgers" : [
+             {
+                 "b_name" : "Бургеры",
+                 "items_list" : [
+                     {
+                         "item_name" : "Чизбургер", "price" : "150", "item_img" : "images/menuImages/id1_b2_item3.jpg"
+                     },
+                     {
+                         "item_name" : "Гамбургер", "price" : "160", "item_img" : "images/menuImages/id1_b2_item4.jpg"
+                     },
+                     {
+                         "item_name" : "Роял Бургер", "price" : "250", "item_img" : "images/menuImages/id1_b2_item5.jpg"
+                     },
+                     {
+                         "item_name" : "Веган Бургер", "price" : "220", "item_img" : "images/menuImages/id1_b2_item6.jpg"
+                     }
+                 ]
+             }
+         ],
+         "salads" : [
+             {
+                 "b_name" : "Салаты",
+                 "items_list" : [
+                     {
+                         "item_name" : "Греческий Салат", "price" : "160", "item_img" : "images/menuImages/id1_b3_item7.jpg"
+                     },
+                     {
+                         "item_name" : "Салат Цезарь", "price" : "180", "item_img" : "images/menuImages/id1_b3_item8.jpg"
+                     }
+                 ]
+             }
+         ],
+         "desserts" : [
+             {
+                 "b_name" : "Десерты",
+                 "items_list" : [
+                     {
+                         "item_name" : "Пирожок с вишней", "price" : "120", "item_img" : "images/menuImages/id1_b4_item9.jpg"
+                     },
+                     {
+                         "item_name" : "Мороженое", "price" : "180", "item_img" : "images/menuImages/id1_b4_item10.jpg"
+                     }
+                 ]
+             }
+         ],
+         "drinks" : [
+             {
+                 "b_name" : "Напитки",
+                 "items_list" : [
+                     {
+                         "item_name" : "Sprite", "price" : "80", "item_img" : "images/menuImages/id1_b5_item11.jpg"
+                     },
+                     {
+                         "item_name" : "Молочный Коктейль", "price" : "140", "item_img" : "images/menuImages/id1_b5_item12.jpg"
+                     },
+                     {
+                         "item_name" : "Coca-Cola", "price" : "100", "item_img" : "images/menuImages/id1_b5_item13.jpg"
+                     }
+                 ]
+             }
+         ]
+     }
+    },
+    {"id": 2,
+     "blocks": {
+         "soups": [
+             {
+                 "b_name": "Супы",
+                 "items_list": [
+                     {
+                         "item_name": "Том Ям", "price": "180", "item_img": "images/menuImages/id2_b1_item1.jpg"
+                     },
+                     {
+                         "item_name": "Мисо-суп", "price": "190", "item_img": "images/menuImages/id2_b1_item2.jpg"
+                     }
+                 ]
+             }
+         ],
+         "hot_dishes": [
+             {
+                 "b_name": "Горячие Блюда",
+                 "items_list": [
+                     {
+                         "item_name": "Терияки с куриной грудкой", "price": "300", "item_img": "images/menuImages/id2_b2_item3.jpg"
+                     }
+                 ]
+             }
+         ],
+         "rolls": [
+             {
+                 "b_name": "Роллы",
+                 "items_list": [
+                     {
+                         "item_name": "Филадельфия", "price": "200", "item_img": "images/menuImages/id2_b3_item4.jpg"
+                     },
+                     {
+                         "item_name": "Калифорния", "price": "180", "item_img": "images/menuImages/id2_b3_item5.jpg"
+                     }
+                 ]
+             }
+         ],
+         "sushi": [
+             {
+                 "b_name": "Суши",
+                 "items_list": [
+                     {
+                         "item_name": "Нигири лосось", "price": "160", "item_img": "images/menuImages/id2_b4_item6.jpg"
+                     },
+                     {
+                         "item_name": "Маки тунец", "price": "180", "item_img": "images/menuImages/id2_b4_item7.jpg"
+                     }
+                 ]
+             }
+         ],
+         "sets": [
+             {
+                 "b_name": "Сеты",
+                 "items_list": [
+                     {
+                         "item_name": "Романтический сет", "price": "350", "item_img": "images/menuImages/id2_b5_item8.jpg"
+                     }
+                 ]
+             }
+         ],
+         "drinks": [
+             {
+                 "b_name": "Напитки",
+                 "items_list": [
+                     {
+                         "item_name": "Чай зеленый", "price": "80", "item_img": "images/menuImages/id2_b6_item9.jpg"
+                     },
+                     {
+                         "item_name": "Саке", "price": "150", "item_img": "images/menuImages/id2_b6_item10.jpg"
+                     }
+                 ]
+             }
+         ]
+     }
+     },
+     {
+         "id": 3,
+         "blocks": {
+             "hot_dishes": [
+                 {
+                     "b_name": "Горячие Блюда",
+                     "items_list": [
+                         {
+                             "item_name": "Стейк", "price": "300", "item_img": "images/menuImages/id3_b1_item1.jpg"
+                         },
+                         {
+                             "item_name": "Паста карбонара", "price": "250", "item_img": "images/menuImages/id3_b1_item2.jpg"
+                         }
+                     ]
+                 }
+             ],
+             "appetizers": [
+                 {
+                     "b_name": "Закуски",
+                     "items_list": [
+                         {
+                             "item_name": "Брускетта", "price": "120", "item_img": "images/menuImages/id3_b2_item3.jpg"
+                         },
+                         {
+                             "item_name": "Картошка по-деревенски", "price": "90", "item_img": "images/menuImages/id3_b2_item4.jpg"
+                         }
+                     ]
+                 }
+             ],
+             "drinks": [
+                 {
+                     "b_name": "Напитки",
+                     "items_list": [
+                         {
+                             "item_name": "Кола", "price": "100", "item_img": "images/menuImages/id3_b3_item5.jpg"
+                         },
+                         {
+                             "item_name": "Лимонад", "price": "120", "item_img": "images/menuImages/id3_b3_item6.jpg"
+                         }
+                     ]
+                 }
+             ]
+         }
+     },
+     {
+         "id": 4,
+         "blocks": {
+             "appetizers": [
+                 {
+                     "b_name": "Закуски",
+                     "items_list": [
+                         {
+                             "item_name": "Спринг роллы", "price": "150", "item_img": "images/menuImages/id4_b1_item1.jpg"
+                         }
+                     ]
+                 }
+             ],
+             "soups": [
+                 {
+                     "b_name": "Супы",
+                     "items_list": [
+                         {
+                             "item_name": "Фо Бо", "price": "180", "item_img": "images/menuImages/id4_b2_item2.jpg"
+                         }
+                     ]
+                 }
+             ],
+             "drinks": [
+                 {
+                     "b_name": "Напитки",
+                     "items_list": [
+                         {
+                             "item_name": "Чай с бергамотом", "price": "90", "item_img": "images/menuImages/id4_b3_item3.jpg"
+                         }
+                     ]
+                 }
+             ]
+         }
+     },
+     {
+         "id": 5,
+         "blocks": {
+             "appetizers": [
+                 {
+                     "b_name": "Закуски",
+                     "items_list": [
+                         {
+                             "item_name": "Баньсен", "price": "120", "item_img": "images/menuImages/id5_b1_item1.jpg"
+                         }
+                     ]
+                 }
+             ],
+             "soups": [
+                 {
+                     "b_name": "Супы",
+                     "items_list": [
+                         {
+                             "item_name": "Мисо-суп", "price": "150", "item_img": "images/menuImages/id5_b2_item2.jpg"
+                         }
+                     ]
+                 }
+                 ],
+             "drinks": [
+                 {
+                     "b_name": "Напитки",
+                     "items_list": [
+                         {
+                             "item_name": "Свежевыжатый сок", "price": "100", "item_img": "images/menuImages/id5_b3_item3.jpg"
+                         }
+                     ]
+                 }
+             ]
+         }
+     },
+     {
+         "id": 6,
+         "blocks": {
+             "desserts": [
+                 {
+                     "b_name": "Десерты",
+                     "items_list": [
+                         {
+                             "item_name": "Тирамису", "price": "180", "item_img": "images/menuImages/id6_b1_item1.jpg"
+                         },
+                         {
+                             "item_name": "Шоколадный фондан", "price": "200", "item_img": "images/menuImages/id6_b1_item2.jpg"
+                         }
+                     ]
+                 }
+             ],
+             "drinks": [
+                 {
+                     "b_name": "Напитки",
+                     "items_list": [
+                         {
+                             "item_name": "Латте", "price": "120", "item_img": "images/menmenuImagesu/id6_b2_item3.jpg"
+                         },
+                         {
+                             "item_name": "Фреш апельсиновый", "price": "150", "item_img": "images/menuImages/id6_b2_item4.jpg"
+                         }
+                     ]
+                 }
+             ]
+         }
+     },
+     {
+         "id": 7,
+         "blocks": {
+             "pizza": [
+                 {
+                     "b_name": "Пицца",
+                     "items_list": [
+                         {
+                             "item_name": "Маргарита", "price": "220", "item_img": "images/menuImages/id7_b1_item1.jpg"
+                         },
+                         {
+                             "item_name": "Пепперони", "price": "240", "item_img": "images/menuImages/id7_b1_item2.jpg"
+                         }
+                     ]
+                 }
+             ],
+             "appetizers": [
+                 {
+                     "b_name": "Закуски",
+                     "items_list": [
+                         {
+                             "item_name": "Картошка-фри", "price": "90", "item_img": "images/menuImages/id7_b2_item3.jpg"
+                         },
+                         {
+                             "item_name": "Чесночные гренки", "price": "120", "item_img": "images/menuImages/id7_b2_item4.jpg"
+                         }
+                     ]
+                 }
+             ],
+             "drinks": [
+                 {
+                     "b_name": "Напитки",
+                     "items_list": [
+                         {
+                             "item_name": "Кола", "price": "100", "item_img": "images/menuImages/id7_b3_item5.jpg"
+                         },
+                         {
+                             "item_name": "Мохито", "price": "140", "item_img": "images/menuImages/id7_b3_item6.jpg"
+                         }
+                     ]
+                 }
+             ]
+         }
+     },
+     {
+         "id": 8,
+         "blocks": {
+             "sushi": [
+                 {
+                     "b_name": "Суши",
+                     "items_list": [
+                         {
+                             "item_name": "Нигири лосось", "price": "160", "item_img": "images/menuImages/id8_b1_item1.jpg"
+                         }
+                     ]
+                 }
+             ],
+             "rolls": [
+                 {
+                     "b_name": "Роллы",
+                     "items_list": [
+                         {
+                             "item_name": "Филадельфия", "price": "200", "item_img": "images/menuImages/id8_b2_item2.jpg"
+                         }
+                     ]
+                 }
+             ],
+             "drinks": [
+                 {
+                     "b_name": "Напитки",
+                     "items_list": [
+                         {
+                             "item_name": "Зеленый чай", "price": "80", "item_img": "images/menuImages/id8_b3_item3.jpg"
+                         }
+                     ]
+                 }
+             ]
+         }
+     },
+     {
+         "id": 9,
+         "blocks": {
+             "hot_dishes": [
+                 {
+                     "b_name": "Горячие Блюда",
+                     "items_list": [
+                         {
+                             "item_name": "Стейк", "price": "300", "item_img": "images/menuImages/id9_b1_item1.jpg"
+                         }
+                     ]
+                 }
+             ],
+             "appetizers": [
+                 {
+                     "b_name": "Закуски",
+                     "items_list": [
+                         {
+                             "item_name": "Брускетта", "price": "120", "item_img": "images/menuImages/id9_b2_item2.jpg"
+                         }
+                     ]
+                 }
+             ],
+             "drinks": [
+                 {
+                     "b_name": "Напитки",
+                     "items_list": [
+                         {
+                             "item_name": "Вино красное", "price": "180", "item_img": "images/menuImages/id9_b3_item3.jpg"
+                         }
+                     ]
+                 }
+             ]
+         }
+     }
+ 
+ ]
