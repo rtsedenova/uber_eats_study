@@ -14,9 +14,6 @@
             "~json/*": [
                 "src/json/*"
             ],
-            "~home/*": [
-                "src/js/home/*"
-            ],
             "~restDetails/*": [
                 "src/js/restDetails/*"
             ]

@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <!-- My CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+
     <title>Ubereats</title>
   </head>
   <body>
@@ -46,14 +46,18 @@
     </div> -->
       </div>
       <div id="menuNav">
-        <a href="">Закуски</a>
+        <!-- <a href="">Закуски</a>
         <a href="">Салаты</a>
         <a href="">Супы</a>
         <a href="">Горячие блюда</a>
         <a href="">Гарниры</a>
-        <a href="">Десерты</a>
+        <a href="">Десерты</a> -->
       </div>
-      <div id="menuContent"></div>
+      <div id="menuContent">
+        <div id="loader-container" class="hidden">
+          <div class="loader"></div>
+        </div>
+      </div>
     </div>
     <!-- Footer -->
     <footer>
@@ -108,6 +112,7 @@
     </footer>
 
     <!-- My JS -->
+    <script type="module" src="../src/js/restDetails.js"></script>
     <script type="module" src="../src/js/main.js"></script>
   </body>
 </html>

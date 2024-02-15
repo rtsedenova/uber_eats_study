@@ -1,0 +1,1 @@
+import{d as t,A as n}from"./App-WfkmI6zl.js";function e(){import.meta.url,import("_").catch(()=>1),async function*(){}().next()}console.log(t);const o=Object.assign({});Object.values(o).forEach(a=>a());const c=new n(t);c.init();export{e as __vite_legacy_guard};

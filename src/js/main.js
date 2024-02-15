@@ -1,20 +1,4 @@
-import "../css/style.css";
-import json from "../json/data.json";
-console.log(json);
-
-// Импорт изображений ресторанов
-const restaurantImages = import.meta.glob(
-  "../images/restaurantsImages/*.{jpg,jpeg,png,svg}"
-);
-Object.values(restaurantImages).forEach((image) => image());
-
-// Импорт изображений меню
-const menuImages = import.meta.glob(
-  "../images/menuImages/*.{jpg,jpeg,png,svg}"
-);
-Object.values(menuImages).forEach((image) => image());
-
-import App from "./home/App.js";
+import App from "./App.js";
 
 const app = new App();
 app.init();
