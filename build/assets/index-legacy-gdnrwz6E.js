@@ -1,1 +1,0 @@
-System.register(["./App-legacy-oF6OKDtS.js"],(function(e,t){"use strict";var s,c;return{setters:[e=>{s=e.d,c=e.A}],execute:function(){console.log(s);const e=Object.assign({});Object.values(e).forEach((e=>e())),new c(s).init()}}}));

@@ -29,11 +29,12 @@ class Meal {
 }
 
 class MealCardInfo {
-  constructor(id, item_name, price, item_img) {
-    this.id = id;
+  constructor(restaurantId, b_name, item_name, price, item_img) {
+    this.restaurantId = restaurantId;
+    this.b_name = b_name;
     this.item_name = item_name;
-    this.item_img = item_img;
     this.price = price;
+    this.item_img = item_img;
   }
 }
 

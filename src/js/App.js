@@ -21,6 +21,8 @@ export default class App {
     const card = document.createElement("div");
     card.classList.add("card");
 
+    card.setAttribute("data-id", cardInfo.id);
+
     const img = document.createElement("img");
     img.src = cardInfo.img;
     card.appendChild(img);
@@ -57,15 +59,12 @@ export default class App {
     cards.forEach((card) => {
       card.addEventListener("click", (e) => {
         const selectedCard = e.currentTarget;
-        const selectedCardInfo = {
-          img: selectedCard.querySelector("img").getAttribute("src"),
-          name: selectedCard.querySelector(".name").textContent,
-          desc1: selectedCard.querySelector(".desc1").textContent,
-          desc2: selectedCard.querySelector(".desc2").textContent,
-        };
+        const selectedRestaurant = this.#restaurants.find(
+          (rest) => rest.cardInfo.id === parseInt(selectedCard.dataset.id)
+        );
         sessionStorage.setItem(
-          "selectedCardInfo",
-          JSON.stringify(selectedCardInfo)
+          "selectedRestaurant",
+          JSON.stringify(selectedRestaurant)
         );
         window.location.href = "pages/restDetails.html";
       });
@@ -92,26 +91,6 @@ export default class App {
       const data = await this.#fetchData("/src/json/data.json");
       const menuData = await this.#fetchData("/src/json/menu.json");
 
-      menuData.forEach((menu) => {
-        const restaurantId = menu.id;
-        console.log(menu.id);
-        for (const blockName of Object.keys(menu.blocks)) {
-          const block = menu.blocks[blockName];
-          block.forEach(({ b_name, items_list }) => {
-            items_list.forEach(({ id, item_name, price, item_img }) => {
-              const cardInfo = new MealCardInfo(
-                restaurantId,
-                item_name,
-                price,
-                item_img
-              );
-              const meal = new Meal(cardInfo);
-              console.log(meal);
-            });
-          });
-        }
-      });
-
       data.forEach((rest) => {
         const cardInfo = new CardInfo(
           rest.id,
@@ -122,8 +101,35 @@ export default class App {
         );
         const restaurant = new Restaurant(cardInfo);
 
+        const menuForRestaurant = menuData.find((menu) => menu.id === rest.id);
+
+        if (menuForRestaurant) {
+          const meals = [];
+
+          for (const blockName of Object.keys(menuForRestaurant.blocks)) {
+            const block = menuForRestaurant.blocks[blockName];
+            block.forEach(({ b_name, items_list }) => {
+              items_list.forEach(({ item_name, price, item_img }) => {
+                const mealCardInfo = new MealCardInfo(
+                  rest.id,
+                  b_name,
+                  item_name,
+                  price,
+                  item_img
+                );
+
+                meals.push(mealCardInfo);
+              });
+            });
+          }
+
+          restaurant.meals = meals;
+        }
+
         this.#restaurants.push(restaurant);
       });
+
+      sessionStorage.setItem("restaurants", JSON.stringify(this.#restaurants));
     } catch (error) {
       console.error("Error initializing restaurants:", error);
       throw error;
@@ -141,19 +147,20 @@ export default class App {
 
   #showRestaurantPage() {
     this.#showRestaurantInfo();
+    this.#showRestaurantMenu();
   }
 
   #showRestaurantInfo() {
     const restInfoContainer = document.querySelector(".restaurant-info");
 
-    const selectedCardInfo = JSON.parse(
-      sessionStorage.getItem("selectedCardInfo")
+    const selectedRestaurant = JSON.parse(
+      sessionStorage.getItem("selectedRestaurant")
     );
-    const url = selectedCardInfo.img;
+    const url = selectedRestaurant.cardInfo.img;
 
-    const nameText = selectedCardInfo.name;
-    const desc1Text = selectedCardInfo.desc1;
-    const desc2Text = selectedCardInfo.desc2;
+    const nameText = selectedRestaurant.cardInfo.name;
+    const desc1Text = selectedRestaurant.cardInfo.desc1;
+    const desc2Text = selectedRestaurant.cardInfo.desc2;
 
     const img = document.createElement("img");
     img.classList.add("bg-image");
@@ -185,6 +192,27 @@ export default class App {
 
     restInfoContainer.appendChild(img);
     restInfoContainer.appendChild(info);
+  }
+
+  #showRestaurantMenu() {
+    const menuNav = document.getElementById("menuNav");
+    const selectedRestaurant = JSON.parse(
+      sessionStorage.getItem("selectedRestaurant")
+    );
+
+    const addedBNames = new Set();
+
+    selectedRestaurant.meals.forEach((el) => {
+      if (!addedBNames.has(el.b_name)) {
+        const menuSectionName = document.createElement("a");
+        menuSectionName.setAttribute("href", "");
+        menuSectionName.textContent = el.b_name;
+
+        menuNav.appendChild(menuSectionName);
+
+        addedBNames.add(el.b_name);
+      }
+    });
   }
 
   #showSpinner() {
